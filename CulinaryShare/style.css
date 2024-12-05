@@ -1,0 +1,507 @@
+/*Home page*/
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    background-color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #6b4de6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #f8f5ff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/*Home page*/
+/* Recipe of the Day Section */
+.recipe-of-the-day, .summer-recipes, .recipes-with-videos {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.recipe-of-the-day h2, .summer-recipes h2, .recipes-with-videos h2 {
+    font-size: 2rem;
+    color: #5d3fd3;
+    margin-bottom: 1rem;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    /* background-color: #e3d7ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 1rem; */
+
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 1.5rem;
+}
+
+.recipe-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* .recipe-card img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    display: block;
+} */
+
+.recipe-image {
+    width: 400px;
+    height: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Recipe Card Title */
+.recipe-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Recipe Card Duration */
+.recipe-card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* View Recipe Button Styles */
+.view-recipe-btn {
+    background-color: #5d3fd3;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.view-recipe-btn:hover {
+    background-color: #4529b3;
+}
+
+/*.footer-about, .footer-links {
+    padding: 2rem;
+    text-align: center;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    background-color: #5d3fd3;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+}*/
+
+
+/*Recipe Listing*/
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #f8f5ff;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem;
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* Recipe Grid Styles */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* .recipe-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+} */
+
+.recipe-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    display: block;
+}
+
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    background-color: #e6e0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-info {
+    padding: 1rem;
+    flex-grow: 1; /* Allow info section to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.recipe-time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Subscribe Form Styles */
+.subscribe-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscribe-form input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.subscribe-form button {
+    padding: 0.5rem 1rem;
+    background: #6b4de6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*About Me*/
+/* Additional styles for the About page - append to existing styles.css */
+
+.about-content {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 400px;
+    background-color: #e6e0ff;
+    border-radius: 8px;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6b4de6;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-links span {
+    color: #ddd;
+}
+
+.made-with {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-text h1 {
+        font-size: 2rem;
+    }
+
+    .placeholder-image {
+        height: 300px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+/* Header Modifications */
+.header {
+    background-color: #f8f5ff;
+    padding: 1.5rem 2rem;
+}
+
+.nav-links {
+    gap: 3rem;
+}
+
+.nav-links a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #6b4de6;
+}
+
+
+/* Footer Styles */
+.footer {
+    background: white;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: #6b4de6;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+/* Subscribe Form Styles */
+.subscribe-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.subscribe-form input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.subscribe-form button {
+    padding: 0.5rem 1rem;
+    background: #6b4de6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

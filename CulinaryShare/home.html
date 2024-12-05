@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CulinaryShare - Recipe Sharing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">CulinaryShare</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes...">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="about.html">About Us</a>
+            <!-- <a href="#">Your Recipe Box</a> -->
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+        <!-- Recipe of the Day Section -->
+        <section class="recipe-of-the-day">
+            <h2>Recipe of the Day</h2>
+            <div class="recipe-card">
+                <div class="recipe-info">
+                    <h3>Salad Caprese</h3>
+                    <p>Classic Italian Salad Caprese: ripe tomatoes, fresh mozzarella, herbs, olive oil, and balsamic vinegar create a refreshing dish for lunch or appetizer.</p>
+                    <a href="https://www.loveandlemons.com/caprese-salad/" class="button">View now →</a>
+                </div>
+                <div class="recipe-image">
+                    <img src="/RECIPESHARING/Caprese-Salad-6.jpg" alt="Recipe of the Day">
+                </div>
+            </div>
+        </section>
+
+        <!-- This Summer Recipes Section -->
+        <section class="summer-recipes">
+            <h2>This Summer Recipes</h2>
+            <p>We have all your Independence Day sweets covered.</p>
+            <div class="recipe-grid">
+                <!-- Recipe Cards -->
+                <div class="recipe-card" data-url="https://www.recipetineats.com/my-favourite-tomato-salad/">
+                    <img src="/RECIPESHARING/The-Best-Tomato-Salad_0.jpg" alt="Italian-style tomato salad">
+                    <h3>Italian-style tomato salad</h3>
+                    <p>16 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+                <div class="recipe-card" data-url="https://smilesandwich.com/2019/09/10/seafood-pasta-with-roasted-veggies/">
+                    <img src="/RECIPESHARING/Seafood-Pasta-with-Roasted-Veggies-3.jpg" alt="Spaghetti with vegetables and shrimp">
+                    <h3>Spaghetti with vegetables and shrimp</h3>
+                    <p>15 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+                <div class="recipe-card" data-url="https://beyondsweetandsavory.com/vietnamese-lotus-stem-salad-with-prawns/">
+                    <img src="/RECIPESHARING/Vietnamese-lotus-stem-salad-with-prawns-Vy-Tran-10-of-13-853x1280-1-ezgif.com-webp-to-jpg-converter.jpg" alt="Lotus delight salad">
+                    <h3>Lotus delight salad</h3>
+                    <p>20 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+                <div class="recipe-card" data-url="https://www.seasonsandsuppers.ca/banana-snack-cake/">
+                    <img src="/RECIPESHARING/banana-snack-cake-1200.jpg" alt="Snack cakes">
+                    <h3>Banana Snack cakes</h3>
+                    <p>21 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipes with Videos Section -->
+        <section class="recipes-with-videos">
+            <h2>Recipes With Videos</h2>
+            <p>Cooking Up Culinary Creations with Step-by-Step Videos</p>
+            <div class="recipe-grid">
+                <!-- Video Recipe Cards -->
+                <div class="recipe-card" data-url="https://www.youtube.com/watch?v=ofVVfanbW88">
+                    <img src="/RECIPESHARING/shrimp-cabbage-salad-recipe-1.jpg" alt="Salad with cabbage and shrimp">
+                    <h3>Salad with cabbage and shrimp</h3>
+                    <p>32 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+                <div class="recipe-card" data-url="https://oliviaadriance.com/shrimp-and-black-bean-salad/">
+                    <img src="/RECIPESHARING/Final_1_Citrusy_Shrimp_and_Black_Bean_Salad.jpg" alt="Salad of cove beans, shrimp and potatoes">
+                    <h3>Salad of cove beans, shrimp and potatoes</h3>
+                    <p>20 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+                <div class="recipe-card" data-url="https://www.youtube.com/watch?v=AcnfPQ5zce4">
+                    <img src="/RECIPESHARING/sunny-side-up-eggs.jpg" alt="Sunny-side up fried eggs">
+                    <h3>Sunny-side up fried eggs</h3>
+                    <p>15 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+                <div class="recipe-card" data-url="https://www.youtube.com/watch?v=zaHzETB5eL8">
+                    <img src="/RECIPESHARING/90e01-2024_02_05eosm59535-ezgif.com-webp-to-jpg-converter.jpg" alt="Lotus delight salad">
+                    <h3>Lotus delight salad</h3>
+                    <p>20 minutes</p>
+                    <button class="view-recipe-btn">View the recipe</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Welcome to our website, a wonderful place to explore and learn how to cook like a pro.</p>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Send</button>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Learn More</h3>
+                <ul>
+                    <li><a href="#">Our Cooks</a></li>
+                    <li><a href="#">See Our Features</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Recipes</h3>
+                <ul>
+                    <li><a href="#">What to Cook This Week</a></li>
+                    <li><a href="#">Pasta</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Healthy</a></li>
+                    <li><a href="#">Vegetarian</a></li>
+                    <li><a href="#">Vegan</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
