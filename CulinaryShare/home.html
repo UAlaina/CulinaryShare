@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CulinaryShare - Recipe Sharing</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">-->
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -12,16 +12,17 @@
     <header class="header">
         <a href="#" class="logo">CulinaryShare</a>
         <div class="search-bar">
-            <input type="text" placeholder="Search recipes...">
+            <input type="text" placeholder="Search recipes.">
         </div>
         <nav class="nav-links">
             <a href="home.html">Home</a>
             <a href="recipes.html">Recipes</a>
             <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
             <!-- <a href="#">Your Recipe Box</a> -->
         </nav>
     </header>
-
+    <div class="main-container">
     <!-- Main Section -->
     <main class="container">
         <!-- Recipe of the Day Section -->
@@ -106,6 +107,13 @@
         </section>
     </main>
 
+    <div id="videoContainer">
+        <iframe id="videoBackground" src="https://www.youtube.com/embed/gOcfUgd4ekA?autoplay=1&loop=1&mute=1" 
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <button id="closeBtn">Close Video</button>
+    </div>
+</div>
     <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-grid">
@@ -120,7 +128,7 @@
             <div class="footer-section">
                 <h3>Learn More</h3>
                 <ul>
-                    <li><a href="#">Our Cooks</a></li>
+                    <li><a href="about.html#cookie-info" id="cookie-info">Our Cooks</a></li>
                     <li><a href="#">See Our Features</a></li>
                 </ul>
             </div>

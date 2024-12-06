@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - CulinaryShare</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">CulinaryShare</a>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="recipes.html">Recipes</a>
+            <a href="about.html">About Us</a>
+            <a href="login.html">Login</a>
+            <!-- <a href="#">Your Recipe Box</a> -->
+        </nav>
+    </header>
+
+  <!-- Login Form Section -->
+  <section class="login-form-section">
+    <h2>Login</h2>
+    <!-- <form action="login_process.php" method="POST" id="login-form"> -->
+    <form id="login-form">
+      <div class="input-group">
+        <label for="email">Email or Username</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="submit-button">Login</button>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Welcome to our website, a wonderful place to explore and learn how to cook like a pro.</p>
+            <div class="subscribe-form">
+                <input type="email" placeholder="Enter your email">
+                <button>Send</button>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Learn More</h3>
+            <ul>
+                <li><a href="about.html#cookie-info" id="cookie-info">Our Cooks</a></li>
+                <li><a href="#">See Our Features</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Recipes</h3>
+            <ul>
+                <li><a href="#">What to Cook This Week</a></li>
+                <li><a href="#">Pasta</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Healthy</a></li>
+                <li><a href="#">Vegetarian</a></li>
+                <li><a href="#">Vegan</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
