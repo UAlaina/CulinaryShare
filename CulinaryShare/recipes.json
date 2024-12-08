@@ -1,0 +1,90 @@
+{
+    "Salad": [
+        {
+            "title": "Cucumber salad, cherry tomatoes",
+            "image": "/RECIPESHARING/Caprese-Salad-6.jpg",
+           "time": "32 minutes",
+            "link": "https://tastesbetterfromscratch.com/tomato-cucumber-salad/"
+        },
+        {
+            "title": "Italian-style tomato salad",
+            "image": "/RECIPESHARING/The-Best-Tomato-Salad_0.jpg",
+            "time": "32 minutes",
+            "link": "https://www.recipetineats.com/my-favourite-tomato-salad/"
+        },
+        {
+            "title": "Potato Salad",
+            "image": "/RECIPESHARING/classic-potato-salad-index-6425b6f9bd7d2-ezgif.com-avif-to-jpg-converter.jpg",
+            "time": "32 minutes",
+            "link": "https://www.delish.com/cooking/recipe-ideas/a53128/classic-potato-salad-recipe/"
+        },
+        {
+            "title": "Salad with cabbage and shrimp",
+            "image": "/RECIPESHARING/savoy-cabbage-shrimp-salad640x360.jpg",
+            "time": "32 minutes",
+            "link": "https://www.pbs.org/food/recipes/savoy-cabbage-shrimp-salad"
+        },
+        {
+            "title": "Quinoa Salad with Roasted Vegetables",
+            "image": "/RECIPESHARING/Quinoa Salad with Roasted Vegetables.webp",
+            "time": "45 minutes",
+            "link": "https://www.ambitiouskitchen.com/roasted-veggie-chickpea-pesto-quinoa-salad/"
+        },
+        {
+            "title": "Asian Sesame Salad",
+            "image": "/RECIPESHARING/Asian Sesame Salad.jpg",
+            "time": "15 minutes",
+            "link": "https://www.onceuponachef.com/recipes/chinese-chicken-salad-with-sesame-ginger-dressing.html"
+        },
+        {
+            "title": "Greek Salad",
+            "image": "/RECIPESHARING/Greek Salad.jpg",
+            "time": "15 minutes",
+            "link": "https://www.onehappydish.com/greek-salad/"
+        }
+    ],
+    "Main Course": [
+        {
+            "title": "Grilled Chicken Breast with Garlic Mashed Potatoes",
+            "image": "/RECIPESHARING/Grilled Chicken Breast with Garlic Mashed Potatoes.jpg",
+            "time": "45 minutes",
+            "link": "https://www.recipetineats.com/4-ingredient-crunchy-chicken-mashed-potato-cucumber-ribbon-tomato-salad/"
+        },
+        {
+            "title": "Beef Steak with Roasted Vegetables",
+            "image": "/RECIPESHARING/Beef Steak with Roasted Vegetables.webp",
+            "time": "35 minutes",
+            "link": "https://www.foodnetwork.com/recipes/food-network-kitchen/flank-steak-with-roasted-root-vegetables-4621811"
+        },
+        {
+            "title": "Spaghetti Carbonara",
+            "image": "/RECIPESHARING/Spaghetti Carbonara.jpg",
+            "time": "25 minutes",
+            "link": "https://leitesculinaria.com/10030/recipes-spaghetti-carbonara.html"
+        },
+        {
+            "title": "Vegetable Stir-Fry with Tofu",
+            "image": "/RECIPESHARING/Vegetable Stir-Fry with Tofu.jpg",
+            "time": "30 minutes",
+            "link": "https://www.funfoodfrolic.com/tofu-vegetable-stir-fry/"
+        },
+        {
+            "title": "Salmon Fillet with Lemon Butter Sauce",
+            "image": "/RECIPESHARING/Salmon Fillet with Lemon Butter Sauce.jpg",
+            "time": "20 minutes",
+            "link": "https://natashaskitchen.com/pan-seared-salmon-with-lemon-butter/"
+        },
+        {
+            "title": "Chicken Parmesan",
+            "image": "/RECIPESHARING/Chicken Parmesan.jpg",
+            "time": "45 minutes",
+            "link": "https://www.goodhousekeeping.com/food-recipes/a38867676/sheet-pan-chicken-parmesan-recipe/"
+        },
+        {
+            "title": "Pulled Pork Tacos",
+            "image": "/RECIPESHARING/Pulled Pork Tacos.jpg",
+            "time": "40 minutes",
+            "link": "https://www.sugarsaltmagic.com/pulled-pork/"
+        }
+    ]
+}

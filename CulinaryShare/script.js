@@ -193,12 +193,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //cookie
 
+// Cookie Functionality
+function checkCookie() {
+    const loggedInUser = sessionStorage.getItem('user');
+    if (!loggedInUser) {
+        const user = getCookie("username");
+        if (user) {
+            alert("Welcome back, " + user);
+        } else {
+            // If cookie doesn't exist, ask for the user's name and set it in the cookie
+            const username = prompt("Please enter your name:");
+            if (username) {
+                setCookie("username", username, 30); // Store for 30 days
+                alert("Welcome, " + username);
+            }
+        }
+    }
+}
+
 // Function to set a cookie
 function setCookie(name, value, days) {
     const expires = new Date();
     expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
     document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/`;
 }
+
+
+// Ensure navigation is updated on each page load
+document.addEventListener('DOMContentLoaded', function () {
+    updateNavigation();
+    if (!sessionStorage.getItem('user')) {
+        checkCookie();
+    }
+});
 
 // Function to get a cookie by name
 function getCookie(name) {
@@ -231,5 +258,65 @@ function checkCookie() {
     }
 }
 
-// Run checkCookie on page load
 window.onload = checkCookie;
+
+
+$(document).ready(function() {
+    // Fetch recipes from JSON file using AJAX
+    $.getJSON("recipes.json", function(data) {
+        // Function to render recipes for each category
+        function renderRecipes(category, recipes) {
+            const categoryDiv = $("#" + category + "-recipes");
+
+            recipes.forEach(function(recipe) {
+                const recipeCard = `
+                    <div class="recipe-card">
+                        <img src="${recipe.image}" alt="${recipe.title}">
+                        <div class="recipe-info">
+                            <h3 class="recipe-title">${recipe.title}</h3>
+                            <p class="recipe-time">${recipe.time}</p>
+                            <a href="${recipe.link}" class="view-recipe-btn">View Recipe</a>
+                        </div>
+                    </div>
+                `;
+                categoryDiv.append(recipeCard);
+            });
+        }
+
+        // Render recipes for Salad and Main Course categories
+        renderRecipes("salad", data.Salad);
+        renderRecipes("main-course", data["Main Course"]);
+
+        // Optional: Handle sorting if required
+        $("#sortSelect").on("change", function() {
+            const sortValue = $(this).val();
+            const recipeContainer = $("#recipeContainer");
+
+            $.getJSON("recipes.json", function(data) {
+                let sortedData = [];
+
+                if (sortValue === "A-Z") {
+                    sortedData = data.Salad.concat(data["Main Course"]).sort((a, b) => a.title.localeCompare(b.title));
+                } else if (sortValue === "Most Popular") {
+                    //eh
+                }
+
+                // Clear existing recipes and display sorted ones
+                recipeContainer.empty();
+                sortedData.forEach(function(recipe) {
+                    const recipeCard = `
+                        <div class="recipe-card">
+                            <img src="${recipe.image}" alt="${recipe.title}">
+                            <div class="recipe-info">
+                                <h3 class="recipe-title">${recipe.title}</h3>
+                                <p class="recipe-time">${recipe.time}</p>
+                                <a href="${recipe.link}" class="view-recipe-btn">View Recipe</a>
+                            </div>
+                        </div>
+                    `;
+                    recipeContainer.append(recipeCard);
+                });
+            });
+        });
+    });
+});
